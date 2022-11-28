@@ -4,3 +4,14 @@
 환경변수를 추가해줘야 합니다.
 
 -> SPRING_DATASOURCE_PASSWORD=12345678;SPRING_DATASOURCE_URL=jdbc:mysql://@@@:3306/db-exercise
+
+호출주소
+
+아이디 생성하는 기능 username , password, email
+
+POST -> http://localhost:8080/api/v1/user/join
+Body -> {
+  "userName":"dmaqkvp" ,
+  "password":"123qwe" ,
+  "email":"dmaqkvp@vkfl.zja"
+}
