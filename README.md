@@ -9,7 +9,7 @@
 
 아이디 생성하는 기능 username , password, email
 
-POST -> http://localhost:8080/api/v1/user/join
+POST -> http://localhost:8080/api/v1/users/join
 Body -> {
   "userName":"dmaqkvp" ,
   "password":"123qwe" ,
