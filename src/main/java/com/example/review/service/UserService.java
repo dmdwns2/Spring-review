@@ -4,6 +4,8 @@ import com.example.review.Repository.UserRepository;
 import com.example.review.domain.User;
 import com.example.review.domain.dto.UserDto;
 import com.example.review.domain.dto.UserJoinRequest;
+import com.example.review.exception.ErrorCode;
+import com.example.review.exception.HospitalReviewAppException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,7 @@ public class UserService {
         // 중복이면 회원가입 x --> Exception(예외)발생
         userRepository.findByUserName(request.getUserName())
                 .ifPresent(user ->{
-                    throw new RuntimeException("해당 UserName이 중복 됩니다.");
+                    throw new HospitalReviewAppException(ErrorCode.DUPLICATED_USER_NAME, String.format("UserName:%s", request.getUserName()));
                 });
 
         // 회원가입 .save()
