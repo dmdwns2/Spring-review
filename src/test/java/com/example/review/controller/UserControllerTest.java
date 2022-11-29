@@ -36,6 +36,8 @@ class UserControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
+
+
     @Test
     @DisplayName("회원가입 성공")
     @WithMockUser
@@ -75,5 +77,23 @@ class UserControllerTest {
                 .andExpect(status().isConflict());
     }
 
+//    @Test
+//    @DisplayName("로그인 실패 - id없음")
+//    @WithMockUser
+//    void login_fail1() throws Exception {
+////        String id = "kyeongrok";
+////        String password = "1q2w3e4r";
+//
+//        // id, pw를 보내서
+//        when(userService.login(any(), any())).thenThrow(new HospitalReviewAppException(ErrorCode.NOT_FOUND, ""));
+//
+//        // NOT_FOUND를 받으면 잘 만든 것이다
+//        mockMvc.perform(post("/api/v1/users/login")
+//                        .with(csrf())
+//                        .contentType(MediaType.APPLICATION_JSON)
+//                        .content(objectMapper.writeValueAsBytes(userJoinRequest)))
+//                .andDo(print())
+//                .andExpect(status().isNotFound());
+//    }
 }
 
