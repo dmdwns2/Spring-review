@@ -22,12 +22,14 @@ public class UserController {
 
     @PostMapping("/join")
     public Response<UserJoinResponse> Join(@RequestBody UserJoinRequest userJoinRequest){
+        log.info("join으로 요청이 들어왔습니다.");
         UserDto userDto = userService.join(userJoinRequest);
         return Response.suceess(new UserJoinResponse(userDto.getUserName(), userDto.getEmail()));
     }
 
     @PostMapping("/login")
     public Response<UserLoginResponse> login(@RequestBody UserLoginRequest userLoginRequest) {
+        log.info("login 요청이 들어왔습니다.");
         String token = userService.login(userLoginRequest.getUserName(), userLoginRequest.getPassword());
         return Response.suceess(new UserLoginResponse(token));
     }

@@ -15,7 +15,6 @@ import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -81,8 +80,6 @@ class UserControllerTest {
 //    @DisplayName("로그인 실패 - id없음")
 //    @WithMockUser
 //    void login_fail1() throws Exception {
-////        String id = "kyeongrok";
-////        String password = "1q2w3e4r";
 //
 //        // id, pw를 보내서
 //        when(userService.login(any(), any())).thenThrow(new HospitalReviewAppException(ErrorCode.NOT_FOUND, ""));
