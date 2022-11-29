@@ -10,7 +10,9 @@
 아이디 생성하는 기능 username , password, email
 
 POST -> http://localhost:8080/api/v1/users/join
-Body ex)-> {
+
+Body 예시 ->
+{
   "userName":"dmaqkvp" ,
   "password":"123qwe" ,
   "email":"dmaqkvp@vkfl.zja"
