@@ -59,6 +59,7 @@ class UserControllerTest {
 
     @Test
     @DisplayName("회원가입 실패")
+    @WithMockUser
     void join_fail() throws Exception {
 
         UserJoinRequest userJoinRequest = UserJoinRequest.builder()
@@ -70,27 +71,33 @@ class UserControllerTest {
         when(userService.join(any())).thenThrow(new HospitalReviewAppException(ErrorCode.DUPLICATED_USER_NAME, ""));
 
         mockMvc.perform(post("/api/v1/users/join")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsBytes(userJoinRequest)))
                 .andDo(print())
                 .andExpect(status().isConflict());
     }
 
-//    @Test
-//    @DisplayName("로그인 실패 - id없음")
-//    @WithMockUser
-//    void login_fail1() throws Exception {
-//
-//        // id, pw를 보내서
-//        when(userService.login(any(), any())).thenThrow(new HospitalReviewAppException(ErrorCode.NOT_FOUND, ""));
-//
-//        // NOT_FOUND를 받으면 잘 만든 것이다
-//        mockMvc.perform(post("/api/v1/users/login")
-//                        .with(csrf())
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .content(objectMapper.writeValueAsBytes(userJoinRequest)))
-//                .andDo(print())
-//                .andExpect(status().isNotFound());
-//    }
+    @Test
+    @DisplayName("로그인 실패 - id없음")
+    @WithMockUser
+    void login_fail1() throws Exception {
+        UserJoinRequest userJoinRequest = UserJoinRequest.builder()
+                .userName("bappe")
+                .password("123qwe")
+                .email("bappe@vkfl.zja")
+                .build();
+
+        // id, pw를 보내서
+        when(userService.login(any(), any())).thenThrow(new HospitalReviewAppException(ErrorCode.NOT_FOUND, ""));
+
+        // NOT_FOUND를 받으면 잘 만든 것이다
+        mockMvc.perform(post("/api/v1/users/login")
+                        .with(csrf())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsBytes(userJoinRequest)))
+                .andDo(print())
+                .andExpect(status().isNotFound());
+    }
 }
 
