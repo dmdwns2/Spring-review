@@ -14,3 +14,4 @@ public enum ErrorCode {
     private HttpStatus status;
     private String message;
 }
+
