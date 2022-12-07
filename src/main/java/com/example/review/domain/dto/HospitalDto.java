@@ -9,10 +9,10 @@ import lombok.ToString;
 @Getter
 @ToString
 public class HospitalDto {
-    private Integer id;
+    private Long id;
     private String content;//roadNameAddress;
     private String title;
-    private Integer patientRoomCount;
-    private Integer totalNumberOfBeds;
+    private Long patientRoomCount;
+    private Long totalNumberOfBeds;
     private Float totalAreaSize;
 }

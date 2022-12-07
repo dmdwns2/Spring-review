@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class UserJoinResponse {
-        private String userName;
+    private String userName;
     private String email;
 }

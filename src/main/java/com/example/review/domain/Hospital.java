@@ -18,17 +18,17 @@ import java.util.List;
 @Getter
 public class Hospital {
     @Id
-    private Integer id;
+    private Long id;
 
     @Column(name = "road_name_address")
     private String roadNameAddress;
 
     @Column(name = "hospital_name")
     private String hospitalName;
-    private Integer patientRoomCount;
-    private Integer totalNumberOfBeds;
+    private Long patientRoomCount;
+    private Long totalNumberOfBeds;
     private String businessTypeName;
-    private Integer businessStatusCode;
+    private Long businessStatusCode;
     private Float totalAreaSize;
 
     //일대다 매칭
