@@ -47,7 +47,7 @@ public class ReviewService {
 
 
     // 작성해봤는데 맞는지 모르겠음
-    public Page<Review> get(Integer hospitalId, Pageable pageable) {
+    public Page<Review> get(Long hospitalId, Pageable pageable) {
         return reviewRepository.findByHospitalId(hospitalId,pageable);
     }
 }

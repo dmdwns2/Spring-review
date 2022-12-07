@@ -17,7 +17,7 @@ public class HospitalService {
     }
 
 
-    public HospitalResponse getHospital(Integer id) {
+    public HospitalResponse getHospital(Long id) {
         Optional<Hospital> optHospital = hospitalRepository.findById(id); // Entity
         Hospital hospital = optHospital.get();
         HospitalResponse hospitalResponse = Hospital.of(hospital); // DTO
