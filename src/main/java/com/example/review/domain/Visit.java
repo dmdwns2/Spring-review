@@ -2,22 +2,28 @@ package com.example.review.domain;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Builder
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity
 public class Visit {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long hospitalId;
-    private Long userId;
+
+    @ManyToOne
+    @JoinColumn(name = "hospital_id")
+    private Hospital hospital;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     private String disease;
-    private Long amount;
+
+    private float amount;
 }

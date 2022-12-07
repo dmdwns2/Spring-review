@@ -5,6 +5,7 @@ import com.example.review.Repository.UserRepository;
 import com.example.review.Repository.VisitRepository;
 import com.example.review.domain.Hospital;
 import com.example.review.domain.User;
+import com.example.review.domain.Visit;
 import com.example.review.exception.ErrorCode;
 import com.example.review.exception.HospitalReviewAppException;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +30,7 @@ public class VisitService {
                 .orElseThrow(() -> new HospitalReviewAppException(ErrorCode.USER_NOT_FOUNDED, String.format("%s user가 없습니다.", userName)));
 
         Visit visit = Visit.builder()
-                .user(user)
+                .userId(user)
                 .hospital(hospital)
                 .disease(dto.getDisease())
                 .amount(dto.getAmount())
