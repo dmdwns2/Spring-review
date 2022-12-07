@@ -18,7 +18,4 @@ public class VisitCreateRequest {
     private String disease;
     private float amount;
 
-    public Long getHospitalId(Hospital hospitalId) {
-        this.id = 
-    }
 }

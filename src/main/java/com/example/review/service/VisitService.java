@@ -29,8 +29,8 @@ public class VisitService {
     public void createVisit(VisitCreateRequest dto, String userName) {
 
         // hospital이 없을 때 등록불가
-        Hospital hospital = hospitalRepository.findById(dto.getHospitalId())
-                .orElseThrow(() -> new HospitalReviewAppException(ErrorCode.NOT_FOUND_HOSPITAL, String.format("hospitalId:%s 가 없습니다.", dto.getHospitalId())));
+        Hospital hospital = hospitalRepository.findById(dto.getHospital().getId())
+                .orElseThrow(() -> new HospitalReviewAppException(ErrorCode.NOT_FOUND_HOSPITAL, String.format("hospitalId:%s 가 없습니다.", dto.getHospital().getId())));
 
         // user가 없을 때 등록불가
         User user = userRepository.findByUserName(userName)
