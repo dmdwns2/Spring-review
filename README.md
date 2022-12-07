@@ -3,7 +3,7 @@
 
 환경변수를 추가해줘야 합니다.
 
--> SPRING_DATASOURCE_PASSWORD=12345678;SPRING_DATASOURCE_URL=jdbc:mysql://@@@:3306/db-exercise
+-> SPRING_DATASOURCE_PASSWORD=@@@;SPRING_DATASOURCE_URL=jdbc:mysql://@@@:3306/dbname
 
 호출주소
 
@@ -17,3 +17,11 @@ Body 예시 ->
   "password":"123qwe" ,
   "email":"dmaqkvp@vkfl.zja"
 }
+
+---
+
+221207 Visit 기능 추가
+
+ERD
+
+![스크린샷 2022-12-07 오후 1 17 26](https://user-images.githubusercontent.com/105894868/206087578-4840c935-9d8f-4271-bf43-55e05a8c4a2b.png)
