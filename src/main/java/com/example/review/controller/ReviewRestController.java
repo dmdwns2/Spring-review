@@ -1,8 +1,7 @@
 package com.example.review.controller;
 
 
-import com.example.springmustachehospital.hospital.domain.ReviewCreateRequest;
-import com.example.springmustachehospital.hospital.service.ReviewService;
+import com.example.review.service.ReviewService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

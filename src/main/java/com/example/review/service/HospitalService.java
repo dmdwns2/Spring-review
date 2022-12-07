@@ -1,8 +1,9 @@
 package com.example.review.service;
 
-import com.example.springmustachehospital.hospital.domain.Hospital;
-import com.example.springmustachehospital.hospital.domain.HospitalResponse;
-import com.example.springmustachehospital.hospital.repository.HospitalRepository;
+
+import com.example.review.Repository.HospitalRepository;
+import com.example.review.domain.Hospital;
+import com.example.review.domain.dto.HospitalResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

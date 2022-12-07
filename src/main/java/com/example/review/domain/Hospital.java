@@ -1,5 +1,6 @@
 package com.example.review.domain;
 
+import com.example.review.controller.Review;
 import com.example.review.domain.dto.HospitalResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

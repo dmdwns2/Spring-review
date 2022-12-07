@@ -1,5 +1,6 @@
 package com.example.review.controller;
 
+import com.example.review.domain.Hospital;
 import lombok.*;
 
 import javax.persistence.*;
@@ -24,6 +25,7 @@ public class Review {
     @ManyToOne
     @JoinColumn(name = "hospital_id")
     private Hospital hospital;
+
 
     public static Review of(Hospital hospital, String title, String content, String userName) {
         Review review = new Review();

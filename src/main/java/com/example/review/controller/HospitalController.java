@@ -1,9 +1,8 @@
 package com.example.review.controller;
 
-import com.example.springmustachehospital.hospital.domain.Hospital;
-import com.example.springmustachehospital.hospital.domain.Review;
-import com.example.springmustachehospital.hospital.repository.HospitalRepository;
-import com.example.springmustachehospital.hospital.repository.ReviewRepository;
+import com.example.review.Repository.HospitalRepository;
+import com.example.review.Repository.ReviewRepository;
+import com.example.review.domain.Hospital;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

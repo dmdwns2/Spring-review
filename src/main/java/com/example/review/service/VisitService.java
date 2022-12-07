@@ -2,6 +2,7 @@ package com.example.review.service;
 
 import com.example.review.Repository.HospitalRepository;
 import com.example.review.Repository.UserRepository;
+import com.example.review.Repository.VisitRepository;
 import com.example.review.domain.Hospital;
 import com.example.review.domain.User;
 import com.example.review.exception.ErrorCode;

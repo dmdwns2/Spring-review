@@ -1,9 +1,8 @@
 package com.example.review.controller;
 
-import com.example.springmustachehospital.hospital.domain.HospitalResponse;
-import com.example.springmustachehospital.hospital.domain.Review;
-import com.example.springmustachehospital.hospital.service.HospitalService;
-import com.example.springmustachehospital.hospital.service.ReviewService;
+import com.example.review.domain.dto.HospitalResponse;
+import com.example.review.service.HospitalService;
+import com.example.review.service.ReviewService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

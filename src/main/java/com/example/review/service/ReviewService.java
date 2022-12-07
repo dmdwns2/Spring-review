@@ -1,11 +1,12 @@
 package com.example.review.service;
 
-import com.example.springmustachehospital.hospital.domain.Hospital;
-import com.example.springmustachehospital.hospital.domain.Review;
-import com.example.springmustachehospital.hospital.domain.ReviewCreateRequest;
-import com.example.springmustachehospital.hospital.domain.ReviewCreateResponse;
-import com.example.springmustachehospital.hospital.repository.HospitalRepository;
-import com.example.springmustachehospital.hospital.repository.ReviewRepository;
+
+import com.example.review.Repository.HospitalRepository;
+import com.example.review.Repository.ReviewRepository;
+import com.example.review.controller.Review;
+import com.example.review.controller.ReviewCreateRequest;
+import com.example.review.controller.ReviewCreateResponse;
+import com.example.review.domain.Hospital;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

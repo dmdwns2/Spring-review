@@ -1,7 +1,7 @@
 package com.example.review.Repository;
 
 
-import com.example.springmustachehospital.hospital.domain.Hospital;
+import com.example.review.domain.Hospital;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,6 @@
 package com.example.review.Repository;
 
-import com.example.springmustachehospital.hospital.domain.Review;
+import com.example.review.controller.Review;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
