@@ -3,7 +3,7 @@
 
 환경변수를 추가해줘야 합니다.
 
--> SPRING_DATASOURCE_PASSWORD=12345678;SPRING_DATASOURCE_URL=jdbc:mysql://@@@:3306/db-exercise
+-> SPRING_DATASOURCE_PASSWORD=@@@;SPRING_DATASOURCE_URL=jdbc:mysql://@@@:3306/dbname
 
 호출주소
 
