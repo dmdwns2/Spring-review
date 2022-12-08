@@ -1,5 +1,6 @@
 package com.example.review.domain;
 
+import com.example.review.domain.dto.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,7 +10,9 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public class Visit {
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+public class Visit extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
